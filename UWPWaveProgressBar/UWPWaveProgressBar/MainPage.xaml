@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UWPWaveProgressBar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:UWPWaveProgressBar"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <local:WaveProgressBar
+            Width="200"
+            Height="300"
+            Progress="{Binding ElementName=Slider, Path=Value}" />
+
+        <Slider
+            x:Name="Slider"
+            Width="200"
+            Margin="0,0,0,20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Maximum="1"
+            Minimum="0"
+            StepFrequency="0.01" />
+    </Grid>
+</Page>
